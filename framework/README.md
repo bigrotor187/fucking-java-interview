@@ -109,7 +109,7 @@ Spring 是一个开源框架，Spring 诞生之初的主要目的是作为 EJB �
 - Request
 - Session
 - Application
-# **5、Spring Bean 的生命周期是什么样的？**
+### **5、Spring Bean 的生命周期是什么样的？**
 - 首先，需要基于Java或XML bean定义来实例化Spring bean。可能还需要执行一些初始化以使其进入可用状态。
 - 之后，当不再需要bean时，它将从IoC容器中删除。
 
