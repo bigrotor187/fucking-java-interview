@@ -45,7 +45,7 @@ Spring 是一个开源框架，Spring 诞生之初的主要目的是作为 EJB �
 - MVC framework：一个实现了模型-视图-控制设计模式的 Web 模块
 - AOP 模块：面向切面编程的实现允许定义更加简洁的方法-拦截器和切入点
 
-![]()
+![](https://github.com/bigrotor187/awesome-java-interview/blob/master/img/Spring%E7%BB%84%E4%BB%B6.png)
   
 ### **5、Spring 框架中用到了哪些设计模式？请举例说明。**
 
@@ -113,7 +113,7 @@ Spring 是一个开源框架，Spring 诞生之初的主要目的是作为 EJB �
 - 首先，需要基于Java或XML bean定义来实例化Spring bean。可能还需要执行一些初始化以使其进入可用状态。
 - 之后，当不再需要bean时，它将从IoC容器中删除。
 
-![](https://github.com/bigrotor187/awesome-java-interview/blob/master/img/Spring%20Framework.jpg)
+![Spring组件](https://github.com/bigrotor187/awesome-java-interview/blob/master/img/Spring%20Framework.jpg)
 
 ### **6、Spring 中单例 Bean 是线程安全的吗？**
 - Spring 中单例 Bean 不是线程安全的，因为线程安全是关于执行的，而单例则是一种专注于创建的设计模式
@@ -195,17 +195,74 @@ Spring 是一个开源框架，Spring 诞生之初的主要目的是作为 EJB �
 
 ## Spring IoC
 
+- **1、什么是 Spring IoC 框架？
+- **2、什么是依赖注入？**
+- **3、IoC 和 DI 有什么区别？**
+- **4、Spring 中有哪几种容器？**
+- **5、Spring 有哪些常用的 BeanFactory 容器？请简要介绍一下。**
+- **6、Spring 有哪些常用的 ApplicationContext 容器？请简要介绍一下。**
+- **7、Spring IoC 有什么好处/优点？**
+- **8、请简述 Spring IoC 的实现机制。**
+- **9、Spring IoC 中有哪些不同类型的事件？**
+- **10、Spring 中哪种注入 bean 的方式是最好的？为什么？**
+- **11、BeanFactory 和 Application 两种容器有什么区别？**
+
 ### **1、什么是 Spring IoC 框架？**
+
+Spring 框架的核心是 Spring IoC 容器，容器通过创建 Bean 对象，将它们装配在一起并配置和管理这些对象的整个生命周期。
+- Spring 容器使用**依赖注入**来管理组成应用程序的 Bean 对象。
+- 容器通过读取提供的**配置元数据（configuration metadata）**的 Bean Definition 来接收对象进行实例化，配置和组装的指令。
+- 该配置元数据的 Bean Definition 可以通过 XML，Java 注解或 Java Config 代码来**提供*。
+
 ### **2、什么是依赖注入？**
+
+- 依赖注入是控制反转（IoC）的一个方面，是一个通用概念，表明我们不需要手动创建对象，而是描述应如何创建它们。如果需要，IoC 容器将实例化所需的类。
+- 不需要直接在代码中将组件和服务连接在一起，而是描述配置文件中哪些组件需要哪些服务。然后，再由 IoC 容器将它们装配在一起。
+
 ### **3、IoC 和 DI 有什么区别？**
+
+- IoC 是目的，DI 是手段,IoC 是指让生成类的方式由传统方式（new）反过来，既程序员不调用 new,需要类的时候由框架注入（DI），是对同一事件不同层面的解读。
+
 ### **4、Spring 中有哪几种容器？**
+
+ Spring 提供了两种最容器，分别是 `BeanFactory` 和 `ApplicationContext`。
+- BeanFactory
+  - BeanFactory 在 spring-beans 项目中提供，默认会使用懒加载的方式来进行 Bean 对象的初始化。
+  - Beanfactory 就像是一个生产 Bean 的工厂，BeanFactory API 为 Spring 的 IoC 功能提供了基础,实际上Beanfactory只是一个接口，定义了最基本的方法，它会在客户端要求实例化 Bean 对象。
+- ApplicationContext
+  - ApplicationContext 在 spring-context 项目中提供，并且继承自 BeanFactory 接口，扩展了BeanFactory 接口，在 BeanFactory 基础上提供了国际化等许多高级的扩展实现。默认情况下会自动初始化那些非懒加载的 bean 对象。其内置的一些功能如下：
+    -  MessageSource ：管理 message ，实现国际化等功能。
+    - ApplicationEventPublisher ：事件发布。
+    - ResourcePatternResolver ：多资源加载。
+    - EnvironmentCapable ：系统 Environment（profile + Properties）相关。
+    - Lifecycle ：管理生命周期。
+    - Closable ：关闭，释放资源
+    - InitializingBean：自定义初始化。
+    - BeanNameAware：设置 beanName 的 Aware 接口。
+
 ### **5、Spring 有哪些常用的 BeanFactory 容器？请简要介绍一下。**
+- BeanFactory 容器中最常用的是 XmlBeanFactory 。它可以根据 XML 文件中定义的内容，创建相应的 Bean。
 ### **6、Spring 有哪些常用的 ApplicationContext 容器？请简要介绍一下。**
+- ApplicationContext 容器中最常用的主要有以下几种实现：
+  - ClassPathXmlApplicationContext ：从 ClassPath 的 XML 配置文件中读取上下文，并生成上下文定义。应用程序上下文从程序环境变量中取得。
+  ```java
+    ApplicationContext context = new ClassPathXmlApplicationContext(“bean.xml”);
+  ```
+  - FileSystemXmlApplicationContext ：由文件系统中的XML配置文件读取上下文。
+  ```java
+    ApplicationContext context = new FileSystemXmlApplicationContext(“bean.xml”);
+  ```
+  - XmlWebApplicationContext ：由 Web 应用的XML文件读取上下文。例如在 Spring MVC 中使用的情况。
+  - Spring Boot 中，使用的是 ApplicationContext 容器中的 ConfigServletWebServerApplicationContext。
 ### **7、Spring IoC 有什么好处/优点？**
 ### **8、请简述 Spring IoC 的实现机制。**
 ### **9、Spring IoC 中有哪些不同类型的事件？**
 ### **10、Spring 中哪种注入 bean 的方式是最好的？为什么？**
 ### **11、BeanFactory 和 Application 两种容器有什么区别？**
+- BeanFactory 提供容器的接口，提供并管理 bean 实例
+- ApplicationContext 提供容器的接口，容纳应用程序中的所有信息，元数据和 bean ，同时它还扩展了 BeanFactory 接口
+
+
 
 ## Spring 注解
 
