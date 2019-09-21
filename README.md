@@ -27,7 +27,21 @@
 - Memcached
 
 - Redis
-
+  - Redis 是什么？都有哪些使用场景？
+  - Redis 有哪些功能？
+  - Redis 和 memecache 有什么区别？
+  - Redis 为什么是单线程的？
+  - 什么是缓存穿透？怎么解决？
+  - Redis 支持的数据类型有哪些？
+  - Redis 支持的 java 客户端都有哪些？
+  - Jedis 和 redisson 有哪些区别？
+  - 怎么保证缓存和数据库数据的一致性？
+  - Redis 持久化有几种方式？
+  - Redis 怎么实现分布式锁？
+  - Redis 分布式锁有什么缺陷？
+  - Redis 如何做内存优化？
+  - Redis 淘汰策略有哪些？
+  - Redis 常见的性能问题有哪些？该如何解决？
 
 ### 分布式服务框架
 - Dubbo
