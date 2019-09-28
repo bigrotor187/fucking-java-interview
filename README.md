@@ -25,7 +25,34 @@
 ## 分布式系统
 ### 分布式缓存
 - Memcached
-
+  - Memcached 简介
+  - Memcached的分布式算法简介
+  - Memcached的数据清除算法
+  - Memcacehd 的工作流程是怎么样的？
+  - Memcached 和 Redis 有什么区别？
+  - Memcached 适用的业务场景有哪些？
+  - Memcached 不适用哪些业务场景？
+  - 能够遍历 Memcached 中所有的 item 吗？
+  - Memcached 集群是怎么工作的？
+  - Memcached 最大的优势是什么？
+  - Memcached 和 MySQL 的 query cache 相比，有什么优缺点？
+  - Memcached 和服务器的 local cache（比如 PHP 的 APC、mmap 文件等）相比，有什么优缺点？
+  - Memcached 的 cache 机制是怎样的？
+  - Memcached 如何实现冗余机制？
+  - Memcached 如何处理容错的？
+  - 如何将 Memcached 中 item 批量导入导出？
+  - 如果确实需要把 Memcached 中的 item 批量导出导入，怎么办？
+  - Memcached 是如何做身份验证的？
+  - Memcached 的多线程是什么？如何使用它们？
+  - Memcached 能接受的 key 的最大长度是多少？
+  - Memcached 对 item 的过期时间有什么限制？
+  - Memcached 最大能存储多大的单个 item？
+  - 为什么单个 item 的大小被限制在 1M byte 之内？
+  - 可以在不同的 Memcached 节点上使用大小不等的缓存空间吗？如果这么做之后，Memcached 能够更有效地使用内存吗？
+  - Memcached 的内存分配器是如何工作的？为什么不适用 malloc/free？为何要使用 slabs？
+  - Memcached 是原子的吗？
+  - 什么时候失效的数据项会从缓存中删除？
+  - 
 - Redis
   - Redis 是什么？都有哪些使用场景？
   - Redis 有哪些功能？
