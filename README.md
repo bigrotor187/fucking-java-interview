@@ -184,3 +184,4 @@
 
 ## 设计模式
 ## 数据结构和算法
+- 详见[链接](https://github.com/bigrotor187/awesome-java-notes#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95)
