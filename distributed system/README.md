@@ -115,10 +115,10 @@
 
 ### Solr
 ![Solr](https://github.com/bigrotor187/awesome-java-interview/blob/master/img/Solr.png)
-  - [1、Solr简介]()
-  - [2、简述Solr的倒排索引]()
-  - [3、为什么要使用Solr?]()
-  - [4、Solr和elasticsearch的区别？]()
+  - [1、Solr简介](https://github.com/bigrotor187/awesome-java-interview/blob/master/distributed%20system/README.md#1solr%E7%AE%80%E4%BB%8B)
+  - [2、简述Solr的倒排索引](https://github.com/bigrotor187/awesome-java-interview/tree/master/distributed%20system#2%E7%AE%80%E8%BF%B0solr%E7%9A%84%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95)
+  - [3、为什么要使用Solr?](https://github.com/bigrotor187/awesome-java-interview/tree/master/distributed%20system#3%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8solr)
+  - [4、Solr和elasticsearch的区别？](https://github.com/bigrotor187/awesome-java-interview/tree/master/distributed%20system#4solr%E5%92%8Celasticsearch%E7%9A%84%E5%8C%BA%E5%88%AB)
   
 #### 1、Solr简介
   - Solr 是一个 Java 开发的基于 Lucene 的`企业级`、`开源`、`全文搜索`平台。它采用的是`反向索引`，即从关键字到文档的映射过程。 
