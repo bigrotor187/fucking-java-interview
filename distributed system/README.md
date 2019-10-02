@@ -114,11 +114,34 @@
   - Elasticsearch简介
 
 ### Solr
-![solr](https://github.com/bigrotor187/awesome-java-interview/blob/master/img/Solr.png)
-  - Solr简介
-  - 简述Solr的倒排索引
-  - 为什么要使用Solr?
-  - Solr和elasticsearch的区别？
+![Solr](https://github.com/bigrotor187/awesome-java-interview/blob/master/img/Solr.png)
+  - [1、Solr简介]()
+  - [2、简述Solr的倒排索引]()
+  - [3、为什么要使用Solr?]()
+  - [4、Solr和elasticsearch的区别？]()
+  
+#### 1、Solr简介
+  - Solr 是一个 Java 开发的基于 Lucene 的`企业级`、`开源`、`全文搜索`平台。它采用的是`反向索引`，即从关键字到文档的映射过程。 
+  - Solr 的资源`Document`为对象进行存储，每个文档由一系列的`Field`构成，每个`Field`表示资源的一个属性。 文档的`Field`可以被索引，以提供高性能的搜索效率。 一般情况下文档都包含一个能唯一表示该文档的id字段。
+  
+#### 2、简述Solr的倒排索引
+  - 倒排索引就是从文档内容到文档序号的过程，将文档内容用solr自带分词器进行分词，然后作为索引，用二分法将关键字与排序号的索引进行匹配，进而查找到对应文档。
+  
+ > 【注】可参考：1、https://blog.csdn.net/chunlei_zhang/article/details/38520315<br>
+ 2、https://blog.csdn.net/hu948162999/article/details/42463043</font>
+#### 3、为什么要使用Solr?
+- Solr 是一个 Java 开发的基于 Lucene 的`企业级`、`开源`、`全文搜索`平台，严格来说，Lucene 负责数据存储，而 Solr 作为一个引擎提供搜索和插入功能，跟数据库的解释器是一样的。但是，如果数据库中有一个字段存了很长的文本，比如存了 1000 个汉字，现在想要从中搜一个词的时候，普通的数据库会使用 like 去查询，遍历整个文本去模糊匹配，效率很低。
+- 所以，为了解决这个问题，自然而然地使用全文搜索工具是最好地。比如 lucene 所作的就是分词，然后去匹配分词的词中是否有想搜的词即可。而 Solr 正是基于 Lucene 实现的，使用 Solr 的检索功能可以大大提高检索效率。
+#### 4、Solr和elasticsearch的区别？
+- 共同点：
+    - solr 和 elasticsearch 都是基于 Lucene 实现的。
+- 不同点：
+  - 1、solr 利用 zookeeper 进行分布式管理，而 elasticsearch 自身带有分布式协调管理功能；
+  - 2、solr 比 elasticsearch 实现更加全面，solr 官方提供的功能更多，而 elasticsearch 本身更注 重于核心功能，高级功能多由第三方插件提供；
+  - 3、solr 在传统的搜索应用中表现好于 elasticsearch，而 elasticsearch 在实时搜索应用方面比 solr 表现好。
+- 最后有必要说明一下传统搜索和实时搜索：
+  - 传统搜索是从静态数据库中筛选出符合条件的结果，这种结果往往是不可变得、静态的。而实时搜索则是说用户对于搜索的结果是实时变化的。
+  - 传统搜索比如电商这种，实时搜索参考谷歌，百度，这种实时搜索。
 
 ## 六、分布式事务
 - 刚性分布式事务
