@@ -44,41 +44,13 @@
 
 ### 分布式搜索引擎
 
-- Elasticsearch
-- Solr
+- [Elasticsearch](https://github.com/bigrotor187/awesome-java-interview/tree/master/distributed%20system#elasticsearch)
+- [Solr](https://github.com/bigrotor187/awesome-java-interview/tree/master/distributed%20system#solr)
 
 ### 分布式事务
 
 ## 数据库
-  - 数据库的三范式是什么？
-
-  - 一张自增表里面总共有 7 条数据，删除了最后 2 条数据，重启 mysql 数据库，又插入了一条数据，此时 id 是几？
-
-  - 如何获取当前数据库版本？
-
-  - 说一下 ACID 是什么？
-
-  - char 和 varchar 的区别是什么？
-
-  - float 和 double 的区别是什么？
-
-  - mysql 的内连接、左连接、右连接有什么区别？
-
-  - mysql 索引是怎么实现的？
-
-  - 怎么验证 mysql 的索引是否满足需求？
-
-  - 说一下数据库的事务隔离？
-
-  - 说一下 mysql 常用的引擎？
-
-  - 说一下 mysql 的行锁和表锁？
-
-  - 说一下乐观锁和悲观锁？
-
-  - mysql 问题排查都有哪些手段？
-
-  - 如何做 mysql 的性能优化？
+  - [MySQL](https://github.com/bigrotor187/awesome-java-interview/tree/master/database#mysql)
 
 ## 设计模式
 ## 数据结构和算法
