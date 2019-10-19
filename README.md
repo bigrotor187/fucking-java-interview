@@ -30,7 +30,7 @@
 ## 分布式系统
 ### 分布式缓存
 - Memcached
-- Redis
+- [Redis](https://github.com/bigrotor187/awesome-java-interview/tree/master/distributed%20system#redis)
 
 ### 分布式服务框架
 - Dubbo
